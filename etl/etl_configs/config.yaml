@@ -1,0 +1,8 @@
+db:
+  dbname: movies
+  host: db
+  port: 5432
+  user: etl
+  password: 12345
+
+es_url: 'http://127.0.0.1:9200'
