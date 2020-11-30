@@ -1,3 +1,13 @@
 from .base import *
 
-# Пока оставим его пустым
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'movies',
+        'USER': 'django',
+        'PASSWORD': '12345',
+        'HOST': 'db',
+        'PORT': '5432',
+    }
+}
+
