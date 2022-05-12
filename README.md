@@ -1,39 +1,39 @@
-# Инструкция по запуску
-Создание образа и запуск сервера:
+# Launching instructions
+Create an image and start the server:
 ```
 ~/Admin_panel$ sudo docker-compose up --build -d
 ```
 
-Сборка и запуск etl производятся при помощи файла etl.sh
+Building and running ETL is done using the etl.sh file
 
-# Техническое задание
+# Technical task
 
-В качестве второго задания предлагаем расширить проект «Панель администратора»: запустить приложение через WSGI/ASGI, настроить отдачу статических файлов через Nginx и подготовить инфраструктуру для работы с Docker. Для этого перенесите в репозиторий код, который вы написали в первом спринте, и выполните задания из папки `tasks`.
+As a second task, we propose to expand the Admin Panel project: launch the application via WSGI/ASGI, set up the delivery of static files via Nginx, and prepare the infrastructure for working with Docker. To do this, push the code that you wrote in the first sprint to the repository and run the tasks from the `tasks` folder.
 
-## Используемые технологии
+## Technologies used
 
-- Приложение запускается под управлением сервера WSGI/ASGI.
-- Для отдачи [статических файлов](https://nginx.org/ru/docs/beginners_guide.html#static) используется **Nginx.**
-- Виртуализация осуществляется в **Docker.**
+- The application runs under the control of a WSGI/ASGI server.
+- To serve [static files](https://nginx.org/ru/docs/beginners_guide.html#static) use **Nginx**.
+- Virtualization is done in **Docker**.
 
-## Основные компоненты системы
+## Main components of the system
 
-1. **Cервер WSGI/ASGI** — сервер с запущенным приложением.
-2. **Nginx** — прокси-сервер, который является точкой входа для web-приложения.
-3. **PostgreSQL** — реляционное хранилище данных. 
-4. **ETL** — механизм обновления данных между PostgreSQL и ES.
+1. **WSGI/ASGI server** - server running the application.
+2. **Nginx** - proxy server, which is the entry point for the web application.
+3. **PostgreSQL** is a relational data store.
+4. **ETL** is a mechanism for updating data between PostgreSQL and ES.
 
-## Схема сервиса
+## Service schema
 
 ![all](images/all.png)
 
-## Требования к проекту
+## Project requirements
 
-1. Приложение должно быть запущено через WSGI/ASGI.
-2. Все компоненты системы находятся в Docker.
-3. Отдача статических файлов осуществляется за счёт Nginx.
+1. The application must be launched via WSGI/ASGI.
+2. All system components are in Docker.
+3. The return of static files is carried out at the expense of Nginx.
 
-## Рекомендации к проекту
+## Recommendations for the project
 
-1. Для работы с WSGI/ASGI-сервером база данных использует специального юзера.
-2. Для взаимодействия между контейнерами используйте docker compose.
+1. The database uses a special user to work with the WSGI/ASGI server.
+2. Use docker compose to communicate between containers.
